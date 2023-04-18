@@ -1,0 +1,11 @@
+extend type Query {
+    """ announcements """
+    announcements: [Announcement!]! @paginate(maxCount:20, defaultCount:10, scopes:["active"])
+
+    """ get announcement by id """
+    announcement(id: ID! @eq): Announcement @first(scopes:["activeById"])
+
+
+    """ banners """
+    banners: [Banner!]! @paginate(maxCount:20, defaultCount:10, scopes:["active"])
+}

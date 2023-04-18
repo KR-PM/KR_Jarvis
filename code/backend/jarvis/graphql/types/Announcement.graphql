@@ -1,0 +1,34 @@
+type Announcement {
+    """ ID """
+    id: ID!
+
+    """ title """
+    title: String
+
+    """ content """
+    content: String
+
+    """ start time """
+    startDateTime: DateTime @rename(attribute: "start_date_time")
+
+    """ end time """
+    endDateTime: DateTime @rename(attribute: "end_date_time")
+
+    """ tag """
+    tag: String
+
+    """ order """
+    order: Int
+
+    """ is show in announce page """
+    isShowInAnnouncePage: Boolean! @rename(attribute: "is_show_in_announce_page")
+
+    """ is popup """
+    isPopup: Boolean! @rename(attribute: "is_popup")
+
+    """ is important """
+    isImportant: Boolean! @rename(attribute: "is_important")
+
+    """ is show scrolling text """
+    isShowScrollingText: Boolean! @rename(attribute: "is_show_scrolling_text")
+}

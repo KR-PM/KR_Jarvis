@@ -67,6 +67,7 @@ alias gendoc='composer dump-autoload && \n \
  php artisan ide-helper:models -N && \n \
  php artisan ide-helper:eloquent && \n \
  php artisan admin:ide-helper'\n \
+ php artisan lighthouse:ide-helper && \n \
 alias resetdb='php artisan db:wipe && php artisan migrate:refresh --seed'\n \
 " >> ~/.bashrc
 

@@ -1,0 +1,25 @@
+type Banner {
+    "编号"
+    id: ID!
+
+    "名称"
+    name: String!
+
+    "目的地 URL"
+    destinationUrl: String @rename(attribute: "destination_url")
+
+    "图片 uRL"
+    imgUrl: String @rename(attribute: "img_url")
+
+    "手机用图片 URL"
+    mobileImgUrl: String @rename(attribute: "mobile_img_url")
+
+    "排序，从小到大"
+    order: Int
+
+    "开始时间"
+    startDateTime: DateTime @rename(attribute: "start_date_time")
+
+    "结束时间"
+    endDateTime: DateTime @rename(attribute: "end_date_time")
+}
