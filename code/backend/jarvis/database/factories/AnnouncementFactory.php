@@ -33,8 +33,8 @@ class AnnouncementFactory extends Factory
         return [
             'title' => 'announcement:'.Str::random(6),
             'content' => $this->faker->sentence(),
-            'start_date_time' => $startTime,
-            'end_date_time' => $endTime,
+            'start_time' => $startTime,
+            'end_time' => $endTime,
             'enabled' => 1,
             'order' => random_int(1, 9),
             'is_show_in_announce_page' => random_int(0, 1),

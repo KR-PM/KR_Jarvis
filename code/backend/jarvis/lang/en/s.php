@@ -1,4 +1,4 @@
-<?php 
+<?php
 return [
     'labels' => [
         's' => 's',
@@ -6,8 +6,8 @@ return [
     'fields' => [
         'title' => 'title',
         'content' => 'content',
-        'start_date_time' => 'start time',
-        'end_date_time' => 'end time',
+        'start_time' => 'start time',
+        'end_time' => 'end time',
         'enabled' => 'enabled',
         'order' => 'order',
         'is_show_in_announce_page' => 'is show in announce page',

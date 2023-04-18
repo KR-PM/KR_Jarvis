@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title', 255)->comment('title');
             $table->mediumText('content')->comment('content');
-            $table->dateTime('start_date_time')->nullable()->comment('start time');
-            $table->dateTime('end_date_time')->nullable()->comment('end time');
+            $table->dateTime('start_time')->nullable()->comment('start time');
+            $table->dateTime('end_time')->nullable()->comment('end time');
             $table->boolean('enabled')->comment('enabled')->default(0);
             $table->integer('order')->comment('order')->default(0);
             $table->boolean('is_show_in_announce_page')->comment('is show in announce page')->default(0);

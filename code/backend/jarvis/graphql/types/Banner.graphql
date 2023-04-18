@@ -18,8 +18,8 @@ type Banner {
     order: Int
 
     "开始时间"
-    startDateTime: DateTime @rename(attribute: "start_date_time")
+    startDateTime: DateTime @rename(attribute: "start_time")
 
     "结束时间"
-    endDateTime: DateTime @rename(attribute: "end_date_time")
+    endDateTime: DateTime @rename(attribute: "end_time")
 }

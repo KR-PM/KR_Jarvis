@@ -19,15 +19,15 @@ class Banner extends Model
         return $query->where('enabled', 1)
             ->where(function (Builder $query) {
                 $query->where(function (Builder $query) {
-                    $query->whereNotNull('start_date_time')
-                        ->where('start_date_time', '<=', date('Y-m-d H:i:s'));
-                })->orWhereNull('start_date_time');
+                    $query->whereNotNull('start_time')
+                        ->where('start_time', '<=', date('Y-m-d H:i:s'));
+                })->orWhereNull('start_time');
 
             })->Where(function (Builder $query) {
                 $query->where(function (Builder $query) {
-                    $query->whereNotNull('end_date_time')
-                        ->where('end_date_time', '>=', date('Y-m-d H:i:s'));
-                })->orWhereNull('end_date_time');
+                    $query->whereNotNull('end_time')
+                        ->where('end_time', '>=', date('Y-m-d H:i:s'));
+                })->orWhereNull('end_time');
             })->orderBy('order')->orderBy('id', 'desc');
     }
 

@@ -21,8 +21,8 @@ class AnnouncementController extends AdminController
             $grid->column('id')->sortable();
             $grid->column('title');
             $grid->column('content');
-            $grid->column('start_date_time');
-            $grid->column('end_date_time');
+            $grid->column('start_time');
+            $grid->column('end_time');
             $grid->column('enabled');
             $grid->column('order');
             $grid->column('is_show_in_announce_page');
@@ -52,8 +52,8 @@ class AnnouncementController extends AdminController
             $show->field('id');
             $show->field('title');
             $show->field('content');
-            $show->field('start_date_time');
-            $show->field('end_date_time');
+            $show->field('start_time');
+            $show->field('end_time');
             $show->field('enabled');
             $show->field('order');
             $show->field('is_show_in_announce_page');
@@ -76,8 +76,8 @@ class AnnouncementController extends AdminController
             $form->display('id');
             $form->text('title');
             $form->text('content');
-            $form->text('start_date_time');
-            $form->text('end_date_time');
+            $form->text('start_time');
+            $form->text('end_time');
             $form->text('enabled');
             $form->text('order');
             $form->text('is_show_in_announce_page');

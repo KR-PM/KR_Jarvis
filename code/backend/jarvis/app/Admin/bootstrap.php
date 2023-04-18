@@ -18,3 +18,23 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+use Dcat\Admin\Form;
+use Dcat\Admin\Grid;
+
+Grid::resolving(function (Grid $grid) {
+    $grid->disableRefreshButton();
+    $grid->disableRowSelector();
+    $grid->disableViewButton();
+    $grid->disableBatchDelete();
+    $grid->filter()->panel();
+    $grid->filter()->expand();
+    $grid->showColumnSelector();
+});
+
+Form::resolving(function (Form $form) {
+    $form->disableViewButton();
+    $form->disableResetButton();
+    $form->disableViewCheck();
+    $form->disableEditingCheck();
+    $form->disableCreatingCheck();
+});

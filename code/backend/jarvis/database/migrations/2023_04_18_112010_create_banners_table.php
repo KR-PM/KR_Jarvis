@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('mobile_img_url', 255)->nullable()->comment('image url for module');
             $table->integer('order')->comment('order')->default(0);
             $table->boolean('enabled')->comment('enabled')->default(0);
-            $table->dateTime('start_date_time')->nullable()->comment('start time');
-            $table->dateTime('end_date_time')->nullable()->comment('end time');
+            $table->dateTime('start_time')->nullable()->comment('start time');
+            $table->dateTime('end_time')->nullable()->comment('end time');
             $table->timestamps();
         });
     }

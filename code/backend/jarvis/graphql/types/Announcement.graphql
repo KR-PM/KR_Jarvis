@@ -9,10 +9,10 @@ type Announcement {
     content: String
 
     """ start time """
-    startDateTime: DateTime @rename(attribute: "start_date_time")
+    startTime: DateTime @rename(attribute: "start_time")
 
     """ end time """
-    endDateTime: DateTime @rename(attribute: "end_date_time")
+    endTime: DateTime @rename(attribute: "end_time")
 
     """ tag """
     tag: String

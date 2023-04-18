@@ -25,14 +25,14 @@ class BannerController extends AdminController
             $grid->column('mobile_img_url');
             $grid->column('order');
             $grid->column('enabled');
-            $grid->column('start_date_time');
-            $grid->column('end_date_time');
+            $grid->column('start_time');
+            $grid->column('end_time');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -54,8 +54,8 @@ class BannerController extends AdminController
             $show->field('mobile_img_url');
             $show->field('order');
             $show->field('enabled');
-            $show->field('start_date_time');
-            $show->field('end_date_time');
+            $show->field('start_time');
+            $show->field('end_time');
             $show->field('created_at');
             $show->field('updated_at');
         });
@@ -76,9 +76,9 @@ class BannerController extends AdminController
             $form->text('mobile_img_url');
             $form->text('order');
             $form->text('enabled');
-            $form->text('start_date_time');
-            $form->text('end_date_time');
-        
+            $form->text('start_time');
+            $form->text('end_time');
+
             $form->display('created_at');
             $form->display('updated_at');
         });

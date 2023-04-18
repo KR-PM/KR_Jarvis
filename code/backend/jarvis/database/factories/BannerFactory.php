@@ -38,8 +38,8 @@ class BannerFactory extends Factory
             'mobile_img_url' => $this->faker->imageUrl(200, 80, 'animals', true),
             'order' => random_int(1, 5),
             'enabled' => 1,
-            'start_date_time' => $startTime,
-            'end_date_time' => $endTime,
+            'start_time' => $startTime,
+            'end_time' => $endTime,
         ];
     }
 }
