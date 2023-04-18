@@ -17,3 +17,11 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+_ide_helper_models.php
+schema-directives.graphql
+programmatic-types.graphql
+_lighthouse_ide_helper.php
+.phpstorm.meta.php
+_ide_helper.php
+dcat_admin_ide_helper.php
+google_vision_api_config.json
