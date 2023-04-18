@@ -1,5 +1,7 @@
 <?php
 
+use App\Admin\Controllers\AnnouncementController;
+use App\Admin\Controllers\BannerController;
 use Dcat\Admin\Admin;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
@@ -14,4 +16,6 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    $router->resource('announcements', AnnouncementController::class);
+    $router->resource('banners', BannerController::class);
 });
