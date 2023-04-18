@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="admin" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="jarvis" start_url="/admin">
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,0 +1,80 @@
+version: "3.8"
+
+services:
+  mysql:
+    platform: linux/x86_64
+    image: mysql:8.0.32
+    command: --default-authentication-plugin=mysql_native_password --default-time-zone=+08:00 --sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=jarvis
+      - TZ=Asia/Taipei
+    working_dir: /app/
+    ports:
+      - "8990:3306"
+    volumes:
+      - mysql-jarvis-volume:/var/lib/mysql
+      - ../../../../:/app/
+
+  phpmyadmin:
+    platform: linux/x86_64
+    image: phpmyadmin/phpmyadmin:5.2.1
+    environment:
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=123456
+      - UPLOAD_LIMIT=2G
+      - MEMORY_LIMIT=1G
+      - TZ=Asia/Taipei
+    ports:
+      - "8993:80"
+    volumes:
+      - ../../../../ops/local/jarvis/all/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    depends_on:
+      - mysql
+
+  phpredisadmin:
+    image: erikdubbelboer/phpredisadmin:1.19.2
+    environment:
+      - REDIS_1_HOST=redis
+      - REDIS_1_PORT=6379
+      - TZ=Asia/Taipei
+    ports:
+      - "8994:80"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:6.2.10
+    sysctls:
+      - net.core.somaxconn=1024
+
+  php:
+    build:
+      context: ../../../../
+      dockerfile: ./ops/local/jarvis/all/php.dockerfile
+    volumes:
+      - ../../../../:/app/
+    working_dir: /app/code/backend/jarvis
+    environment:
+      - TZ=Asia/Taipei
+    depends_on:
+      - redis
+      - mysql
+
+  nginx:
+    build:
+      context: ../../../../
+      dockerfile: ./ops/local/jarvis/all/nginx.dockerfile
+    environment:
+      - TZ=Asia/Taipei
+    ports:
+      - "8991:80"
+    volumes:
+      - ../../../../:/app/
+    command: [ nginx, '-g', 'daemon off;' ]
+    depends_on:
+      - php
+
+volumes:
+  mysql-jarvis-volume:
