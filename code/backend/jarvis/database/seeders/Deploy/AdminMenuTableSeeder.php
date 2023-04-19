@@ -36,6 +36,7 @@ class AdminMenuTableSeeder extends Seeder
 
         ['id' => 100, 'parent_id' => 7, 'title' => 'announcements', 'icon' => 'fa-caret-right', 'uri' => 'announcements'],
         ['id' => 101, 'parent_id' => 7, 'title' => 'banners', 'icon' => 'fa-caret-right', 'uri' => 'banners'],
+        ['id' => 102, 'parent_id' => 7, 'title' => 'users', 'icon' => 'fa-caret-right', 'uri' => 'users'],
     ];
 
     /**
@@ -59,7 +60,7 @@ class AdminMenuTableSeeder extends Seeder
 
                 $insertData[] = array_merge($this->defaultData, $row);
 
-                $this->command->info('新增项目：'.$row['title']);
+                $this->command->info('add menu item：'.$row['title']);
             }
         }
 

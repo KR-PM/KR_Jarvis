@@ -26,7 +26,7 @@ class CreateAdminTables extends Migration
         Schema::create($this->config('database.users_table'), function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('username', 120)->unique();
-            $table->string('password', 80);
+            $table->string('password', 255);
             $table->string('name');
             $table->string('avatar')->nullable();
             $table->string('remember_token', 100)->nullable();

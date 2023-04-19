@@ -1,0 +1,22 @@
+type User {
+    """ ID """
+    id: ID!
+
+    """ account """
+    account: String!
+
+    """ name """
+    name: String
+
+    """ age """
+    age: Int
+
+    """ job """
+    job: Int
+
+    """ email """
+    email: String
+
+    """ phone """
+    phone: String
+}

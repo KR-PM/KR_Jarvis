@@ -18,8 +18,10 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
+use Dcat\Admin\Grid\Column;
 
 Grid::resolving(function (Grid $grid) {
     $grid->disableRefreshButton();
@@ -37,4 +39,7 @@ Form::resolving(function (Form $form) {
     $form->disableViewCheck();
     $form->disableEditingCheck();
     $form->disableCreatingCheck();
+});
+Column::extend('enumDescription', function ($value, $enumClass) {
+    return $enumClass::getDescription($value);
 });

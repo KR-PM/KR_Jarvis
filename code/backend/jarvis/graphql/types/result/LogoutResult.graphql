@@ -1,0 +1,4 @@
+type LogoutResult {
+    """ success or not """
+    success: Boolean!
+}

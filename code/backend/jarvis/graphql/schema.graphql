@@ -1,6 +1,12 @@
 #import Scalar.graphql
+#import types/mutation/*.graphql
+#import types/result/*.graphql
 #import types/*.graphql
+#import inputs/*.graphql
 
 #import Query.graphql
+#import Mutation.graphql
 
 type Query
+
+type Mutation

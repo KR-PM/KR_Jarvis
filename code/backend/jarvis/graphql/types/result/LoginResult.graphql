@@ -1,0 +1,4 @@
+type LoginResult {
+    """ token for login """
+    token: String!
+}

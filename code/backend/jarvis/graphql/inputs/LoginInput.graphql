@@ -1,0 +1,8 @@
+""" Input for login """
+input LoginInput {
+    """ account """
+    account: String!
+
+    """ password """
+    password: String!
+}
