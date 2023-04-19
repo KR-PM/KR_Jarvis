@@ -142,6 +142,7 @@
       <path value="$PROJECT_DIR$/code/backend/jarvis/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/code/backend/jarvis/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/code/backend/jarvis/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/code/backend/jarvis/vendor/_laravel_idea" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
