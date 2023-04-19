@@ -1,6 +1,6 @@
 extend type Query {
     """ current user info """
-    me: User @kGuard
+    me: User @guard
 
     """ announcements """
     announcements: [Announcement!]! @paginate(maxCount:20, defaultCount:10, scopes:["active"])
