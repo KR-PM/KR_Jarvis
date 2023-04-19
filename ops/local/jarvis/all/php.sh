@@ -18,7 +18,7 @@ composer install
 is_start_up_for_first_time=0
 
 if [[ ! -f "${path}/.env" ]]; then
-  cp ${path}/.env.local.example ${path}/.env
+  cp ${path}/.env.local ${path}/.env
   is_start_up_for_first_time=1
 fi
 
