@@ -31,7 +31,7 @@ class FakeSeeder extends Seeder
         $murphy->account = $name;
         $murphy->password = Hash::make($name);
         $murphy->name = ucfirst($name);
-        $murphy->age = random_int(20, 40);
+        $murphy->age = random_int(20, 41);
         $murphy->job = $job;
         $murphy->email = $name.'@gmail.com';
         $murphy->phone = $this->generatePhone();
