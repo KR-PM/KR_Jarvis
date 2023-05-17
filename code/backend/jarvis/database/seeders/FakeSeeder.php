@@ -60,7 +60,7 @@ class FakeSeeder extends Seeder
         $this->createUser('cave', JobTitleEnum::FRONTEND_ENGINEER);
         $this->createUser('joyce', JobTitleEnum::ASSISTANT);
         $this->createUser('judy', JobTitleEnum::PRODUCT_MANAGER);
-        $this->createUser('roy', JobTitleEnum::BACKEND_ENGINEER);
+        $this->createUser('roy', JobTitleEnum::BACKEND_ENGINEER);   // 測試
 
         $this->createUser('otis', JobTitleEnum::BACKEND_ENGINEER);
         $this->createUser('brian', JobTitleEnum::BACKEND_ENGINEER);
