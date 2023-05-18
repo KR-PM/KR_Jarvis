@@ -11,4 +11,7 @@ extend type Query {
 
     """ banners """
     banners: [Banner!]! @paginate(maxCount:20, defaultCount:10, scopes:["active"])
+
+    """ draw name list """
+    draw_names: [DrawName]
 }

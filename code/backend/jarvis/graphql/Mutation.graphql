@@ -4,4 +4,7 @@ extend type Mutation {
 
     """ logout """
     logout: LogoutResult @kGuard
+
+    """ draw """
+    draw: DrawName
 }

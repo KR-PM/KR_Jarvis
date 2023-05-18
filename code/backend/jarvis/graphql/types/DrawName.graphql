@@ -1,0 +1,7 @@
+type DrawName {
+    "id"
+    id: ID!
+
+    "name"
+    name: String!
+}
