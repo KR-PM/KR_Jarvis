@@ -1,0 +1,7 @@
+overwrite: true
+schema: http://localhost:8991/graphql
+
+generates:
+  src/app/core/schema.ts:
+    plugins:
+      - typescript

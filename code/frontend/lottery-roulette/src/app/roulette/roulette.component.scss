@@ -1,0 +1,31 @@
+.turnbg{
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background-image: url('./../../assets/turntableimg/bg.png');
+}
+
+.turntable-center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 174px;
+  height: 228px;
+  // width: 50px;
+  // height: 50px;
+  // background-color: green;
+}
+
+// .turntable-top{
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 50px;
+//   height: 50px;
+//   width: 5px;
+//   height: 50px;
+//   background: blue;
+//   z-index: 2;
+// }
