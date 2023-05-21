@@ -37,6 +37,7 @@ class AdminMenuTableSeeder extends Seeder
         ['id' => 100, 'parent_id' => 7, 'title' => 'announcements', 'icon' => 'fa-caret-right', 'uri' => 'announcements'],
         ['id' => 101, 'parent_id' => 7, 'title' => 'banners', 'icon' => 'fa-caret-right', 'uri' => 'banners'],
         ['id' => 102, 'parent_id' => 7, 'title' => 'users', 'icon' => 'fa-caret-right', 'uri' => 'users'],
+        ['id' => 103, 'parent_id' => 7, 'title' => 'lotteryNames', 'icon' => 'fa-caret-right', 'uri' => 'lotteryNames'],
     ];
 
     /**

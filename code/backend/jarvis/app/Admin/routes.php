@@ -2,6 +2,7 @@
 
 use App\Admin\Controllers\AnnouncementController;
 use App\Admin\Controllers\BannerController;
+use App\Admin\Controllers\LotteryNameController;
 use App\Admin\Controllers\UserController;
 use Dcat\Admin\Admin;
 use Illuminate\Routing\Router;
@@ -20,4 +21,5 @@ Route::group([
     $router->resource('announcements', AnnouncementController::class);
     $router->resource('banners', BannerController::class);
     $router->resource('users', UserController::class);
+    $router->resource('lotteryNames', LotteryNameController::class);
 });

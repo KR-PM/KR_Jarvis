@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Enums\JobTitleEnum;
 use App\Models\Announcement;
 use App\Models\Banner;
+use App\Models\LotteryName;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
@@ -23,6 +24,7 @@ class FakeSeeder extends Seeder
         Announcement::factory()->count(20)->create();
 
         $this->createUsers();
+        $this->createLotteryNames();
     }
 
     private function createUser($name, int $job): void
@@ -31,7 +33,7 @@ class FakeSeeder extends Seeder
         $murphy->account = $name;
         $murphy->password = Hash::make($name);
         $murphy->name = ucfirst($name);
-        $murphy->age = random_int(20, 41);
+        $murphy->age = random_int(20, 40);
         $murphy->job = $job;
         $murphy->email = $name.'@gmail.com';
         $murphy->phone = $this->generatePhone();
@@ -66,5 +68,18 @@ class FakeSeeder extends Seeder
         $this->createUser('brian', JobTitleEnum::BACKEND_ENGINEER);
         $this->createUser('henry', JobTitleEnum::FRONTEND_ENGINEER);
         $this->createUser('tina', JobTitleEnum::ASSISTANT);
+    }
+
+    private function createLotteryNames(): void {
+        $name_list = [
+            "roy",
+            "oswald",
+        ];
+        foreach ($name_list as $name) {
+            $LotteryName = new LotteryName();
+            $LotteryName->name = ucfirst($name);
+            $LotteryName->save();
+        }
+
     }
 }
