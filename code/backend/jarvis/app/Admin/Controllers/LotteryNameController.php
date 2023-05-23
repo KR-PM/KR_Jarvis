@@ -20,12 +20,13 @@ class LotteryNameController extends AdminController
         return Grid::make(new LotteryName(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('name');
+            $grid->column('exclude');
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -42,6 +43,7 @@ class LotteryNameController extends AdminController
         return Show::make($id, new LotteryName(), function (Show $show) {
             $show->field('id');
             $show->field('name');
+            $show->field('exclude');
             $show->field('created_at');
             $show->field('updated_at');
         });
@@ -57,7 +59,7 @@ class LotteryNameController extends AdminController
         return Form::make(new LotteryName(), function (Form $form) {
             $form->display('id');
             $form->text('name');
-        
+            $form->number('exclude');
             $form->display('created_at');
             $form->display('updated_at');
         });

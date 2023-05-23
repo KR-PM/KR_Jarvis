@@ -2,6 +2,7 @@
 
 namespace App\GraphQL\Queries;
 
+use App\Models\LotteryName;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,15 +14,9 @@ class DrawNames
      */
     public function __invoke($_, array $args)
     {
-        return [
-            [
-                "id" => 1,
-                "name" => "oswald"
-            ],
-            [
-                "id" => 2,
-                "name" => "roy"
-            ],
-        ];
+        $a = LotteryName::select(["id","name"])
+            ->get()->toArray();
+        return $a;
+
     }
 }
