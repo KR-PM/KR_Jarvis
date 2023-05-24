@@ -15,6 +15,7 @@ class DrawNames
     public function __invoke($_, array $args)
     {
         $a = LotteryName::select(["id","name"])
+            ->where('exclude', 0)
             ->get()->toArray();
         return $a;
 
