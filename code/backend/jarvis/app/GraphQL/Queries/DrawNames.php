@@ -3,8 +3,6 @@
 namespace App\GraphQL\Queries;
 
 use App\Models\LotteryName;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 class DrawNames
 {

@@ -7,4 +7,7 @@ extend type Mutation {
 
     """ draw """
     draw: DrawName
+
+    """ clear draw  """
+    clear_draw: String
 }
